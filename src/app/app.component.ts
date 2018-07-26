@@ -8,6 +8,8 @@ import { GoogleMapsPage } from '../pages/google-maps/google-maps.page';
 import { HomePage } from '../pages/home/home.page';
 import { SlideBoxPage } from '../pages/slide-box/slide-box.page';
 import { WordpressListPage } from '../pages/wordpress/list/wordpress.list.page';
+import {AppVersion} from '@ionic-native/app-version';
+
 
 @Component({
 	templateUrl: 'app.html'
@@ -15,6 +17,7 @@ import { WordpressListPage } from '../pages/wordpress/list/wordpress.list.page';
 export class MyApp {
 	pages;
 	rootPage;
+	protected app_version: string;
 
 	@ViewChild(Nav) nav: Nav;
 
@@ -23,6 +26,7 @@ export class MyApp {
 		private platform: Platform,
 		private menu: MenuController,
 		private statusBar: StatusBar,
+		private appVersion: AppVersion
 	) {
 		this.initializeApp();
 
@@ -41,6 +45,13 @@ export class MyApp {
 	initializeApp() {
 		this.platform.ready().then(() => {
 			this.statusBar.styleDefault();
+			this.appVersion.getVersionNumber().then(
+				(versionNumber) => {
+					this.app_version = versionNumber;
+				},
+				(error) => {
+					console.log(error);
+				});
 		});
 	}
 
