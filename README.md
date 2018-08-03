@@ -1,4 +1,5 @@
-# Supermodular2 Ionic
+# Ionic Display Version
+This demo app is based on Supermodular 2.
 A super modular Ionic 2.x starter application.
 
 * Project's Home: https://github.com/skounis/supermodular2
