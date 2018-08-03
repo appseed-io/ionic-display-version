@@ -1,5 +1,6 @@
 # Ionic Display Version
-This demo app is based on Supermodular 2.
+This demo app is about reading the version of your app from the target build settings and display it inside of Ionic’s iOS and Android builds.
+It is based on Supermodular 2.
 A super modular Ionic 2.x starter application.
 
 * Project's Home: https://github.com/skounis/supermodular2
